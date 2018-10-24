@@ -52,6 +52,19 @@ class DefaultController extends Controller
     	 
     	return array();
     }
+
+
+    /**
+     * @Route("/reservas", name="reservas")
+     * @Template("AppBundle:Sitio:reservas.html.twig")
+     */
+    public function reservasAction(Request $request)
+    {
+         
+        return array();
+    }
+
+
     
     /**
      * @Route("/los-aparts", name="aparts")
