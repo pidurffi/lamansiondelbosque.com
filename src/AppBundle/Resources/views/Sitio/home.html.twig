@@ -1,0 +1,289 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+
+
+{% block content %}
+	<div class="slider-wrapper">
+		<div class="slider">
+			<img src="{{ asset('bundles/app/images/slider/01.jpg')}}" alt="">
+			<img src="{{ asset('bundles/app/images/slider/02.jpg')}}" alt="">
+			<img src="{{ asset('bundles/app/images/slider/03.jpg')}}" alt="">
+		</div>
+		<span class="icon-arrow-down"></span>
+	</div>
+
+	{{ render(controller('AppBundle:Default:promociones')) }}
+	
+	<section class="us" id="us">
+		<div class="container">
+			<h3>La Mansión del Bosque - Hotel Spa &amp; Aparts</h3>
+			<p>Entre el mar y bosque marpampeano se encuentra La Mansión del Bosque que fue construída respetando la armonía del entorno, con amplios jardines y zonas de relax que hacen del hotel un lugar único y acogedor. Apenas a unos 150 mts de la playa y unos 200 del pintoresco centro comercial.</p>
+			<p>El hotel cuenta con 18 habitaciones equipadas con lcd, cajas de seguridad, amenities, wifi, algunas con hidro, otras con deck privado o balcón y 4 unidades de apart equipadas con kitchinette, anafe eléctrico, microondas, heladera con freezer, vajilla completa, cajas de seguridad, wifi, amenities, parrillas. Se aceptan mascotas con un costo adicional únicamente en las unidades de apart.</p>
+			<p>Todas las unidades y habitaciones cuentan con vista y están rodeadas del más puro bosque con los servicios más atractivos para descansar de la rutina o simplemente regalarse el tiempo de conectar con la naturaleza y encantos propios de este mágico lugar.</p>
+			<p>Se distingue además por su amplio Spa con tratamientos de belleza, terapéuticos y de relax.</p>
+			<p>En verano funciona el Restaurant del Bosque con un variado y tentador menú. Durante todo el año cuenta con bar, cafetería y room service.</p>
+			<p>¡La Mansión del Bosque es la mejor opción para disfrutar un lugar privilegiado como Mar de las Pampas sin sentirse tan lejos de casa!</p>
+			<p>¡Qué bueno que nos conozca ahora y nos tenga en cuenta todo el año!!!</p>
+		</div>
+	</section>
+
+	<section class="rooms">
+		<div class="container">
+			<div class="title">
+				<h2>Nuestras habitaciones y aparts</h2>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="rooms-item">
+						<img src="{{ asset('bundles/app/images/rooms/01.jpg') }}" alt="">
+						<div class="content">
+							<h3>Las Habitaciones</h3>
+							<p>Todas las habitaciones estan rodeadas de bosque y su particular tranquilidad. Algunas de las habitaciones en planta baja tienen un deck privado y reposeras con salida al bosque. Contamos con algunas habitaciones en la planta alta con balcón y vista al bosque.</p>
+							<a href="{{ path('habitaciones') }}">Ver más</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="rooms-item">
+						<img src="{{ asset('bundles/app/images/rooms/02.jpg') }}" alt="">
+						<div class="content">
+							<h3>Los Aparts</h3>
+							<p>Si quiere más intimidad... opte por los Aparts, concebidos para familias de dos, tres o cuatro personas...</p>
+							<a href="{{ path('aparts') }}">Ver más</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="spa">
+		<div class="container">
+			<div class="title">
+				<h2>Nuestro SPA</h2>
+			</div>
+			<p>En nuestro Spa... podes elegir distintos tratamientos de belleza y masajes terapéuticos, ducha escocesa, baño finlandés, jacuzzi con espuma y sales aromáticas. Está provisto de vestuarios con duchas, amenities y batas para su mayor confort.</p>
+			<p>En todos los tratamientos se utilizan las técnicas manuales realizadas por profesionales idóneos para brindar a nuestros huéspedes un encuentro con el bienestar del cuerpo y del espíritu, a través de nuestros tratamientos exclusivos de relax, rejuvenecimiento, belleza y anti-stress.</p>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="spa-item">
+						<img src="{{ asset('bundles/app/images/spa/01.png') }}" alt="">
+						<h3>Piscina cubierta climatizada</h3>
+						<p>Sauna seco, Ducha escocesa, baño finlandes</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="spa-item">
+						<img src="{{ asset('bundles/app/images/spa/02.png') }}" alt="">
+						<h3>Tratamientos corporales</h3>
+						<p>* Servicio con costo adicional</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="spa-item">
+						<img src="{{ asset('bundles/app/images/spa/03.png') }}" alt="">
+						<h3>Tratamientos faciales</h3>
+						<p>* Servicio con costo adicional</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="spa-item">
+						<img src="{{ asset('bundles/app/images/spa/06.png') }}" alt="">
+						<h3>Masajes</h3>
+						<p>Piedras calientes, Reductor anticelulítico, Descontracturante, Masaje + drenaje linfático, Relajante, Reflexología, Reiki, Holístico, Antiestres</p>
+						<p>* Servicio con costo adicional</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="spa-item">
+						<img src="{{ asset('bundles/app/images/spa/04.png') }}" alt="">
+						<h3>Belleza de pies y manos</h3>
+						<p>* Servicio con costo adicional</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="spa-item">
+						<img src="{{ asset('bundles/app/images/spa/05.png') }}" alt="">
+						<h3>Ozonoterapia</h3>
+						<p>* Servicio con costo adicional</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="gallery" id="gallery">
+		<div class="container">
+			<div class="title">
+				<h2>Galería de fotos</h2>
+			  {{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }}
+		  </div>
+		</div>
+	</section>
+
+	<section class="services" id="services">
+		<div class="container">
+			<div class="title">
+				<h2>Servicios incluidos</h2>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Desayuno buffet</h3>
+						<p>Con pastelería de elaboración artesanal, variedad de frutas, fiambres, panificados y demás delicias para empezar a disfrutar del día.</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>WiFI</h3>
+						<p>Internet WIfi en todo el complejo</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Pileta</h3>
+						<p>Libre uso de la pileta climatizada cubierta</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Circuito hídrico</h3>
+						<p>Sauna, ducha escosesa y finlandesa</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Gimnasio</h3>
+						<p>Equipado con las mejores máquinas y todo lo que necesitás</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Sala Relax</h3>
+						<p>Hermosa sala de relax con una increible vista al bosque</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Bicicletas</h3>
+						<p>Tenemos bicicletas para que recorra la zona respirando el más puro de los aires</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Sala de lectura y videoteca</h3>
+						<p>Equipada con todo lo que necesitás para pasar un rato de tranquilidad</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Sala de juegos</h3>
+						<p>Con mesa de pool, mini-tejo y ping pong, juegos de mesa</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Servicio de playa</h3>
+						<p>Reposeras y toallas en bolso playero</p>
+					</div>
+				</div>
+			</div>
+			<div class="title">
+				<h2 class="mt">Servicios con costo adicional</h2>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Masajes</h3>
+						<p>Servicio de masajes</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Hidro</h3>
+						<p>Sesión de hidromasaje en el SPA</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Tratamientos</h3>
+						<p>Tanto de belleza corporal como facial</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Clases</h3>
+						<p>Clases personalizadas de Yoga o Pilates</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Baby Sitter</h3>
+						<p>Cuidado de niños</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="map" id="ubicacion">
+		<div class="title">
+			<h2>Ubicación</h2>
+		</div>
+		<div id="map"></div>
+	</section>
+
+	<section class="contact" id="contacto">
+		<div class="container">
+			<div class="title">
+				<h2>Contacto</h2>
+			</div>
+			<div class="row">
+				<form  id="form_contacto" method="post" onsubmit="return validar_form();">
+				<div class="col-sm-6">
+					<input type="text" placeholder="Nombre y apellido" required="required" id="form_nombre">
+					<input type="email" placeholder="Mail" required="required" id="form_email">
+					<input type="text" placeholder="Teléfono" required="required" id="form_telefono">
+				</div>
+				<div class="col-sm-6">
+					<textarea placeholder="Mensaje" id="form_mensaje"></textarea>
+				</div>
+				<div class="col-sm-12 btn">
+					<a class="send">Enviar</a>
+					<div class="spinner" id="form_img_loading">
+						<div class="rect1"></div>
+						<div class="rect2"></div>
+						<div class="rect3"></div>
+						<div class="rect4"></div>
+						<div class="rect5"></div>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</section>
+{% endblock %}	
