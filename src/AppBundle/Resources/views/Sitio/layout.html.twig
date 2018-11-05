@@ -13,6 +13,7 @@
 	<link href="{{ asset('bundles/app/stylesheets/default-skin/default-skin.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="{{ asset('bundles/app/stylesheets/fonts.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="{{ asset('bundles/app/stylesheets/admin-v2.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+	{% block extra_css %}{% endblock %}
 	<!-- FONTS -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 	<!-- JS -->
@@ -53,6 +54,7 @@
   
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+{% block extra_js %}{% endblock %}
 </head>
 
 <body class="{% if app.request.attributes.get('_route') == 'homepage' %}home{% else %}int{% endif %}">

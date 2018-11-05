@@ -1,0 +1,111 @@
+/*
+    Document   : main
+    Created on : 25/04/2013, 14:27:36
+    Author     : misa
+    Description:
+        Purpose of the stylesheet follows.
+*/
+@media print{@page {
+                 -webkit-transform: rotate(-90deg);
+                 -moz-transform:rotate(-90deg);
+                 filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+             }
+}
+body{
+    -webkit-print-color-adjust:exact;
+}
+.modal {
+    display: none;
+}
+.noprint {
+    display: none ;
+}
+
+.table td {
+    padding: 4px;
+}
+#navbar {
+    display: none;
+}
+.btn {
+    display: none;
+}
+.nav .nav-tabs {
+    display: none;
+}
+#observaciones_internas {
+    display: none;
+}
+a[href]:after {
+    content:"" !important;
+}
+td, tr, th, table, a, span {
+    background-color: #fff;
+}
+
+.container {
+    width: auto ;
+    max-width: 100%;
+}
+.ui-datepicker {
+    display: none;
+}
+.print {
+    display: block;
+}
+.pagination li.finde a {
+    background-color: #ccc;
+    border-color: #D9D9D9;
+}
+.pagination li.success a {
+    background-color: #51b7a8;
+}
+.pagination li.warning a {
+    background-color: #ffd371;
+}
+.pagination li.danger a {
+    background-color: #f2dede;
+}
+
+.pagination li.recambio a {
+    background-color: #ac94e7;
+}
+.form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+.form-inline .form-control {
+    display: inline-block;
+}
+.nv-point-paths {
+    display: none;
+}
+.grilla li a {
+    color: black;
+    padding: 3px 3px;
+    width: 25px;
+}
+.pagination li.finde a {
+    background-color: #fff !important;
+    border-color: #D9D9D9;
+}
+.pagination li.success a {
+    /*background-color: #9fd098;
+    border-color: #d6e9c6;*/
+    background-color: #51b7a8 !important;
+}
+.pagination li.warning a {
+    /* background-color: #fed22f;
+    border-color: #ffd72f;*/
+    background-color: #ffd371 !important;
+}
+.pagination li.danger a {
+    background-color: #f2dede !important;
+}
+
+.pagination li.recambio a {
+    /* background-color: #e5a0e2;
+    border-color: #f8c6f8;*/
+    background-color: #ac94e7 !important;
+}

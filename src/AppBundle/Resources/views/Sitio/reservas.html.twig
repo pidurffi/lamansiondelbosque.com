@@ -1,5 +1,32 @@
 {% extends "AppBundle::Sitio/layout.html.twig" %}
 
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" media="screen" href="/bundles/app/sach/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/bundles/app/sach/css/sweet-alert.min.css" />
+    <link rel="stylesheet" type="text/css" media="" href="/bundles/app/sach/css/../js/star-rating/jquery.rating.css" />
+    <link rel="stylesheet" type="text/css" media="" href="/bundles/app/sach/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="" href="/bundles/app/sach/css/sach.css?v=2.5" />
+    <link rel="stylesheet" type="text/css" media="print" href="/bundles/app/sach/css/print.css?v=0.1" />
+{% endblock %}
+
+{% block extra_js %}
+<!-- <script type="text/javascript" src="/js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery-migrate-1.0.0.min.js"></script>-->
+<script type="text/javascript" src="/bundles/app/sach/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/star-rating/jquery.rating.pack.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/star-rating/jquery.MetaData.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/jquery.ui.datepicker-es.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/jquery.alphanumeric2.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/sweet-alert.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/mailcheck.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/jquery.geocomplete.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2qT9pBGruSlyob0ulL9yFqCDZfnQErfs&amp;libraries=places"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/moment.min.js?2107"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/moment_es.js?2107"></script>
+{% endblock %}
+
+
 {% block content %}
 
 	<section class="interna">
