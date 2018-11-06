@@ -1678,7 +1678,7 @@ h1, h3, h3, h4, h5 {
 /* line 12, ../sass/screen.scss */
 body {
   padding-top: 138px;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Slab', serif !important;
 }
 @media (max-width: 991px) {
 body {padding-top: 90px;}
@@ -1764,6 +1764,9 @@ header .container .logo {
   background-image: url(../images/logo-header.png);
   background-repeat: no-repeat;
   background-size: contain;
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
 }
 /* line 93, ../sass/screen.scss */
 header .container .social, header .container nav {
@@ -1782,7 +1785,8 @@ header .container .social {display: none;}
 }
 /* line 102, ../sass/screen.scss */
 header .container .social p {
-  font-size: 20px;
+  margin: 0;
+  font-size: 22px;
 }
 /* line 106, ../sass/screen.scss */
 header .container .social ul {
@@ -1805,6 +1809,12 @@ header .container .social ul li a {
 /* line 125, ../sass/screen.scss */
 header .container nav {
   bottom: 10px;
+}
+header .container nav ul {
+  margin: 0;
+}
+header a:hover {
+  text-decoration: none !important;
 }
 /* line 130, ../sass/screen.scss */
 header .container nav ul li {
@@ -2300,8 +2310,8 @@ footer {
 }
 /* line 495, ../sass/screen.scss */
 footer p {
-  margin-top: 10px;
-  font-size: 12px;
+  margin: 10px 0 0 0;
+  font-size: 16px;
   line-height: 20px;
 }
 /* line 501, ../sass/screen.scss */
@@ -2310,6 +2320,8 @@ footer .rt {
 }
 /* line 504, ../sass/screen.scss */
 footer .rt a {
+  font-size: 16px;
+  text-decoration: none;
   color: #473f36;
 }
 /* line 508, ../sass/screen.scss */
@@ -2346,6 +2358,15 @@ footer .rt {margin-top: 10px; text-align: center;}
 }
 .interna .col-sm-12 {
   margin-bottom: 40px;
+}
+.interna.sach .col-sm-12 {
+  margin-bottom: 0;
+}
+.interna.sach .form-group {
+  text-align: left !important;
+}
+.interna.sach img {
+  display: inline !important;
 }
 .interna p, .interna ul li {
   line-height: 40px;

@@ -2,9 +2,9 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: bf_mansion
-    database_user: bf_mansion
-    database_password:
+    database_name: lamansio_sit2016
+    database_user: lamansio_sit2016
+    database_password: Q[oXZFoc~O9f
 #   database_name: lamansio_sit2016
 #   database_user: lamansio_sit2016
 #   database_password: Q[oXZFoc~O9f    
