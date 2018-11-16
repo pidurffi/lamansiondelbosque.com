@@ -2541,3 +2541,8 @@ footer .rt {margin-top: 10px; text-align: center;}
 button:focus, button:active {
   outline: 0;
 }
+
+video {
+  display: block;
+  width: 100%;
+}
