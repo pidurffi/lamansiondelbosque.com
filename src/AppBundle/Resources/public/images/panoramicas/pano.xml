@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour appversion="6.1.0" start="node10" apprev="17841">
+  <panorama id="node1">
+    <input leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-4.39567" projection="4" pan="3.46133" fov="91.5639"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-65.53" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node1" copyright="" tags="Fotos La Mansión" latitude="4294957297.278231" title="" datetime="21/9/19 11:19" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node8}" tilt="-2.5" title="" description="" skinid="ht_node" pan="-145.31" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node2">
+    <input leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-12.3406" projection="4" pan="-131.608" fov="90.4911"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-65.53" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node2" copyright="" tags="Fotos La Mansión" latitude="4294957297.278231" title="" datetime="21/9/19 10:34" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node3}" tilt="8.47" title="" description="" skinid="ht_node" pan="-95.57" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node3">
+    <input leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-6.9943" projection="4" pan="175.868" fov="93.9936"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-65.53" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node3" copyright="" tags="Fotos La Mansión" latitude="4294957297.278231" title="" datetime="21/9/19 10:39" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node4}" tilt="1.55" title="" description="" skinid="ht_node" pan="-207.1" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node4">
+    <input leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-11.8287" projection="4" pan="123.658" fov="91.5639"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-65.53" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node4" copyright="" tags="Fotos La Mansión" latitude="4294957297.278231" title="" datetime="21/9/19 10:44" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node8}" tilt="-3.5" title="" description="" skinid="ht_node" pan="-121.88" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node14">
+    <input leveltileurl="tiles/node14/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-11.1653" projection="4" pan="12.6078" fov="64.9345"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node14" copyright="" tags="Fotos Casa Mansión" latitude="4294957297.278231" title="" datetime="11/10/19 17:47" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node15}" tilt="-31.48" title="" description="" skinid="ht_node" pan="-215.53" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node5">
+    <input leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-7.85979" projection="4" pan="168.191" fov="90.4911"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-65.53" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node5" copyright="" tags="Fotos La Mansión" latitude="4294957297.278231" title="" datetime="21/9/19 11:15" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node7}" tilt="0.34" title="" description="" skinid="ht_node" pan="-330.46" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node6">
+    <input leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-2.07251" projection="4" pan="-137.966" fov="91.5639"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-65.53" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node6" copyright="" tags="Fotos La Mansión" latitude="4294957297.278231" title="" datetime="21/9/19 11:11" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node8}" tilt="-1.37" title="" description="" skinid="ht_node" pan="-339.71" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node7">
+    <input leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-8.9162" projection="4" pan="-150.366" fov="90.4911"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-65.53" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node7" copyright="" tags="Fotos La Mansión" latitude="4294957297.278231" title="" datetime="21/9/19 11:01" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node6}" tilt="-3.65" title="" description="" skinid="ht_node" pan="-164.79" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node9">
+    <input leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-2.39605" projection="4" pan="56.8003" fov="91.5639"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-65.53" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node9" copyright="" tags="Fotos La Mansión" latitude="4294957297.278231" title="" datetime="21/9/19 11:04" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node5}" tilt="-4.17" title="" description="" skinid="ht_node" pan="-175.53" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node10">
+    <input leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-1.81" projection="4" pan="-173.1" fov="91.56"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-65.53" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node10" copyright="" tags="Fotos La Mansión" latitude="-37.32322390" title="" datetime="22/9/19 08:57" description="" longitude="-57.02085283" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node8}" distance="3.65208e+06" tilt="3.12" title="" description="" skinid="ht_node" pan="-168.9" id="Point01"/>
+      <hotspot target="" url="{node13}" distance="3.65208e+06" tilt="0.55" title="" description="" skinid="ht_node" pan="-295.35" id="Point02"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node8">
+    <input leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-3.9778" projection="4" pan="174.401" fov="90.4911"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-65.53" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node8" copyright="" tags="Fotos La Mansión" latitude="4294957297.278231" title="" datetime="21/9/19 10:26" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node1}" tilt="-1.91" title="" description="" skinid="ht_node" pan="-278.75" id="Point01"/>
+      <hotspot target="" url="{node15}" tilt="-0.1" title="" description="" skinid="ht_node" pan="-179.81" id="Point02"/>
+      <hotspot target="" url="{node9}" tilt="2.26" title="" description="" skinid="ht_node" pan="-146.21" id="Point03"/>
+      <hotspot target="" url="{node10}" distance="3.65208e+06" tilt="2.15" title="" description="" skinid="ht_node" pan="-3.85" id="Point04"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node11">
+    <input leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-0.386328" projection="4" pan="-132.956" fov="90.082"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node11" copyright="" tags="Fotos Casa Mansión" latitude="4294957297.278231" title="" datetime="11/10/19 17:41" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node12}" tilt="1.46" title="" description="" skinid="ht_node" pan="-352.61" id="Point01"/>
+      <hotspot target="" url="{node13}" tilt="2.62" title="" description="" skinid="ht_node" pan="-222.45" id="Point02"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node12">
+    <input leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-2.02429" projection="4" pan="6.28185" fov="90.082"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node12" copyright="" tags="Fotos Casa Mansión" latitude="4294957297.278231" title="" datetime="11/10/19 17:41" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node11}" tilt="1.04" title="" description="" skinid="ht_node" pan="-342.96" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node13">
+    <input leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0.815216" projection="4" pan="62.327" fov="90.082"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node13" copyright="" tags="Fotos Casa Mansión" latitude="4294957297.278231" title="" datetime="11/10/19 17:36" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node10}" distance="3.65208e+06" tilt="1.98" title="" description="" skinid="ht_node" pan="-249.16" id="Point01"/>
+      <hotspot target="" url="{node11}" tilt="5.23" title="" description="" skinid="ht_node" pan="-301.93" id="Point02"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <panorama id="node15">
+    <input leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1440" levelingpitch="0" levelbias="0.400" height="1440" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1440" predecode="0" height="1440" preload="0"/>
+      <level width="720" predecode="0" height="720" preload="0"/>
+      <level width="360" predecode="1" height="360" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="-5.83601" projection="4" pan="-142.939" fov="64.9345"/>
+      <flyin tilt="-90" projection="9" pan="0" fov="170"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="90" scaletofit="1" pan="360" fov="120"/>
+    </view>
+    <userdata customnodeid="" nodeid="node15" copyright="" tags="Fotos Casa Mansión" latitude="4294957297.278231" title="" datetime="11/10/19 17:45" description="" longitude="4294957297.278231" comment="" info="" author="" source=""/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label wordwrap="1" width="180" backgroundcolor="0xffffff" borderalpha="1" border="1" textalpha="1" enabled="1" height="20" textcolor="0x000000" bordercolor="0x000000" backgroundalpha="1" borderradius="1" background="1"/>
+      <polystyle backgroundcolor="0x0000ff" borderalpha="1" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.25098"/>
+      <hotspot target="" url="{node14}" tilt="13.66" title="" description="" skinid="ht_node" pan="-145.52" id="Point01"/>
+      <hotspot target="" url="{node2}" tilt="0.12" title="" description="" skinid="ht_node" pan="-16.8" id="Point02"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomoutpause="1" zoomspeed="2" zoomfov="20" softedge="0" enabled="1" zoomout="0" blendtime="1" zoomin="0" blendcolor="0x000000"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control rubberband="0" lockedmouse="0" invertwheel="0" invertcontrol="1" lockedkeyboard="0" lockedkeyboardzoom="0" contextprojections="0" speedwheel="1" hideabout="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" sensitivity="8" dblclickfullscreen="0"/>
+  </panorama>
+  <masternode>
+    <userdata customnodeid="" nodeid="master" copyright="" tags="" latitude="" title="" datetime="" description="" longitude="" comment="" info="" author="" source=""/>
+  </masternode>
+</tour>

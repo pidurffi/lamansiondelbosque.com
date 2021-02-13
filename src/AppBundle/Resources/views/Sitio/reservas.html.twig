@@ -1,0 +1,712 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" media="screen" href="/bundles/app/sach/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/bundles/app/sach/css/sweet-alert.min.css" />
+    <link rel="stylesheet" type="text/css" media="" href="/bundles/app/sach/css/../js/star-rating/jquery.rating.css" />
+    <link rel="stylesheet" type="text/css" media="" href="/bundles/app/sach/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="" href="/bundles/app/sach/css/sach.css?v=2.5" />
+    <link rel="stylesheet" type="text/css" media="print" href="/bundles/app/sach/css/print.css?v=0.1" />
+{% endblock %}
+
+{% block extra_js %}
+<!-- <script type="text/javascript" src="/js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery-migrate-1.0.0.min.js"></script>-->
+<script type="text/javascript" src="/bundles/app/sach/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/star-rating/jquery.rating.pack.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/star-rating/jquery.MetaData.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/jquery.ui.datepicker-es.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/jquery.alphanumeric2.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/sweet-alert.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/mailcheck.min.js"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/jquery.geocomplete.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2qT9pBGruSlyob0ulL9yFqCDZfnQErfs&amp;libraries=places"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/moment.min.js?2107"></script>
+<script type="text/javascript" src="/bundles/app/sach/js/moment_es.js?2107"></script>
+{% endblock %}
+
+
+{% block content %}
+
+	<section class="interna sach">
+		
+		<div class="container">
+		
+
+		        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43948505-2', 'auto');
+  ga('send', 'pageview');
+
+</script>        <div class="container">
+                                                <script type="text/javascript">
+    $(document).ready(function () {
+        $('input#cliente_cl_docnumero').numeric();
+        $('input#cliente_cl_docnumero').focus();
+        $('input#cliente_cl_ciudad').geocomplete();
+        $('#cliente_rsv_pax_mayor option[value="0"]').text($('#cliente_rsv_pax_mayor').attr('placeholder'));
+        $('#cliente_rsv_pax_menor option[value="0"]').text($('#cliente_rsv_pax_menor').attr('placeholder'));
+        $('#cliente_rsv_pax_bebe option[value="0"]').text($('#cliente_rsv_pax_bebe').attr('placeholder'));
+        $('#cliente_rsv_pax_mayor, #cliente_rsv_pax_menor,#cliente_rsv_pax_bebe ').css('padding', '0');
+        $('#cliente_rsv_pax_mayor, #cliente_rsv_pax_menor,#cliente_rsv_pax_bebe ').css('font-size', '0.8em');
+        $('#cliente_rsv_pax_mayor option[value="0"]').val('');
+        $('#cliente_rsv_pax_menor option[value="0"]').val('');
+        $('#cliente_rsv_pax_bebe option[value="0"]').val('');
+        Mailcheck.defaultDomains.push('speedy.com.ar', 'fibertel.com.ar', 'arnet.com.ar', 'ciudad.com.ar', 'telefonica.com.ar'); // extend existing domains
+        Mailcheck.defaultSecondLevelDomains.push('speedy', 'fibertel', 'arnet', 'ciudad', 'infovia', 'booking', 'telefonica'); // extend existing SLDs
+        Mailcheck.defaultTopLevelDomains.push('com.ar', 'ar');
+        $('input[type="email"').on('blur', function () {
+            $(this).mailcheck({
+                suggested: function (element, suggestion) {
+                    // callback code
+                    console.log("suggestion ", suggestion.full);
+                    $(element).nextAll(".suggestion").first().html('Intentó escribir <b><i><a onclick="$(\'#' + $(element).attr('id') + '\').val(\'' + suggestion.full + '\');">' + suggestion.full + "</a></b></i> ?");
+                },
+            });
+        });
+
+    });
+    function statusChangeCallback(response) {
+        if (response.status === 'connected') {
+            RellenarCampos();
+        } else {
+            console.log('No inicio con Facebook');
+        }
+    }
+    function checkLoginState() {
+        FB.getLoginStatus(function (response) {
+            statusChangeCallback(response);
+        });
+    }
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '189756824442424',
+            cookie: true,
+            xfbml: true,
+            version: 'v2.10'
+        });
+        FB.getLoginStatus(function (response) {
+            statusChangeCallback(response);
+        });
+
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+            return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/es_LA/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    function RellenarCampos() {
+        FB.api('/me', function (response) {
+            document.getElementById('status').innerHTML =
+                    'Gracias por conectarse ' + response.name + '!';
+            if (response.id) {
+                $('#cliente_cl_facebookid').val(response.id);
+            }
+            if ($('#cliente_cl_nombre').val() == '' && response.first_name) {
+                $('#cliente_cl_nombre').val(response.first_name);
+            }
+            if ($('#cliente_cl_apellido').val() == '' && response.last_name) {
+                $('#cliente_cl_apellido').val(response.last_name);
+            }
+            if ($('#cliente_cl_mail').val() == '' && response.email) {
+                $('#cliente_cl_mail').val(response.email);
+            }
+            if ($('#cliente_cl_fnac_day').val() == '' &&
+                    $('#cliente_cl_fnac_month').val() == '' &&
+                    $('#cliente_cl_fnac_year').val() == '' && response.birthday) {
+                var birth = moment(response.birthday, "MM/DD/YYYY");
+                $('#cliente_cl_fnac_day').val(birth.format('DD'));
+                $('#cliente_cl_fnac_month').val(birth.format('MM'));
+                $('#cliente_cl_fnac_year').val(birth.format('YYYY'));
+            }
+            if (response.gender == 'female') {
+                $('#cliente_cl_sexo option[value="Mujer"]').prop('selected', true)
+            }
+            //console.log(response);
+        });
+    }
+</script>
+<form action="https://sach.com.ar/main/ClienteExtCrear" method="post" id="form_cliente" enctype="multipart/form-data" >
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <h4>Datos Personales</h4>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <div class="text-center">
+                    <div id="fb-root"></div>
+                    <fb:login-button scope="public_profile,email,user_birthday" onlogin="checkLoginState();" >Conectarse con Facebook
+                    </fb:login-button>
+                    <div id="status"></div>
+                </div>
+            </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="cliente_cl_nombre">Nombres</label>                    <input class="form-control" type="text" name="cliente[cl_nombre]" id="cliente_cl_nombre" />                                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="cliente_cl_apellido">Apellido</label>                    <input class="form-control" type="text" name="cliente[cl_apellido]" id="cliente_cl_apellido" />                                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="cliente_cl_docnumero">Número de Documento (DNI, PASAPORTE) - Solo Número</label>                    <input class="form-control" type="text" name="cliente[cl_docnumero]" id="cliente_cl_docnumero" />                                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="cliente_cl_sexo">Sexo</label>                    <select class="form-control" name="cliente[cl_sexo]" id="cliente_cl_sexo">
+<option value="Hombre" selected="selected">Hombre</option>
+<option value="Mujer">Mujer</option>
+</select>                                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="cliente_cl_telcelular">Teléfono Móvil</label>                    <input class="form-control" type="text" name="cliente[cl_telcelular]" id="cliente_cl_telcelular" />                                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="cliente_cl_mail">Correo Electrónico</label>                    <input class="form-control" type="email" name="cliente[cl_mail]" id="cliente_cl_mail" />                    <div class="suggestion alert-warning"></div>
+                                    </div>
+            </div>
+            
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_cl_mailalternativo">Correo Electrónico Alternativo</label>                        <input class="form-control" type="email" name="cliente[cl_mailalternativo]" id="cliente_cl_mailalternativo" />                        <div class="suggestion alert-warning"></div>
+                                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_cl_telfijo">Teléfono Fijo</label>                        <input class="form-control" type="text" name="cliente[cl_telfijo]" id="cliente_cl_telfijo" />                                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_cl_telfijotrabajo">Teléfono Trabajo</label>                        <input class="form-control" type="text" name="cliente[cl_telfijotrabajo]" id="cliente_cl_telfijotrabajo" />                                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_cl_calle">Calle</label>                        <input class="form-control" type="text" name="cliente[cl_calle]" id="cliente_cl_calle" />                                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_cl_numeropuerta">Número</label>                        <input class="form-control" type="text" name="cliente[cl_numeropuerta]" id="cliente_cl_numeropuerta" />                                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_cl_piso">Piso</label>                        <input class="form-control" type="text" name="cliente[cl_piso]" id="cliente_cl_piso" />                                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_cl_dpto">Departamento</label>                        <input class="form-control" type="text" name="cliente[cl_dpto]" id="cliente_cl_dpto" />                                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_cl_cp">Código Postal</label>                        <input class="form-control" type="text" name="cliente[cl_cp]" id="cliente_cl_cp" />                                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_cl_ciudad">Ciudad</label>                        <input class="form-control" type="text" name="cliente[cl_ciudad]" id="cliente_cl_ciudad" />                                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_cl_fnac">Fecha de Nacimiento</label><br/>
+                        <select name="cliente[cl_fnac][day]" id="cliente_cl_fnac_day">
+<option value="" selected="selected"></option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>/<select name="cliente[cl_fnac][month]" id="cliente_cl_fnac_month">
+<option value="" selected="selected"></option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>/<select name="cliente[cl_fnac][year]" id="cliente_cl_fnac_year">
+<option value="" selected="selected"></option>
+<option value="1900">1900</option>
+<option value="1901">1901</option>
+<option value="1902">1902</option>
+<option value="1903">1903</option>
+<option value="1904">1904</option>
+<option value="1905">1905</option>
+<option value="1906">1906</option>
+<option value="1907">1907</option>
+<option value="1908">1908</option>
+<option value="1909">1909</option>
+<option value="1910">1910</option>
+<option value="1911">1911</option>
+<option value="1912">1912</option>
+<option value="1913">1913</option>
+<option value="1914">1914</option>
+<option value="1915">1915</option>
+<option value="1916">1916</option>
+<option value="1917">1917</option>
+<option value="1918">1918</option>
+<option value="1919">1919</option>
+<option value="1920">1920</option>
+<option value="1921">1921</option>
+<option value="1922">1922</option>
+<option value="1923">1923</option>
+<option value="1924">1924</option>
+<option value="1925">1925</option>
+<option value="1926">1926</option>
+<option value="1927">1927</option>
+<option value="1928">1928</option>
+<option value="1929">1929</option>
+<option value="1930">1930</option>
+<option value="1931">1931</option>
+<option value="1932">1932</option>
+<option value="1933">1933</option>
+<option value="1934">1934</option>
+<option value="1935">1935</option>
+<option value="1936">1936</option>
+<option value="1937">1937</option>
+<option value="1938">1938</option>
+<option value="1939">1939</option>
+<option value="1940">1940</option>
+<option value="1941">1941</option>
+<option value="1942">1942</option>
+<option value="1943">1943</option>
+<option value="1944">1944</option>
+<option value="1945">1945</option>
+<option value="1946">1946</option>
+<option value="1947">1947</option>
+<option value="1948">1948</option>
+<option value="1949">1949</option>
+<option value="1950">1950</option>
+<option value="1951">1951</option>
+<option value="1952">1952</option>
+<option value="1953">1953</option>
+<option value="1954">1954</option>
+<option value="1955">1955</option>
+<option value="1956">1956</option>
+<option value="1957">1957</option>
+<option value="1958">1958</option>
+<option value="1959">1959</option>
+<option value="1960">1960</option>
+<option value="1961">1961</option>
+<option value="1962">1962</option>
+<option value="1963">1963</option>
+<option value="1964">1964</option>
+<option value="1965">1965</option>
+<option value="1966">1966</option>
+<option value="1967">1967</option>
+<option value="1968">1968</option>
+<option value="1969">1969</option>
+<option value="1970">1970</option>
+<option value="1971">1971</option>
+<option value="1972">1972</option>
+<option value="1973">1973</option>
+<option value="1974">1974</option>
+<option value="1975">1975</option>
+<option value="1976">1976</option>
+<option value="1977">1977</option>
+<option value="1978">1978</option>
+<option value="1979">1979</option>
+<option value="1980">1980</option>
+<option value="1981">1981</option>
+<option value="1982">1982</option>
+<option value="1983">1983</option>
+<option value="1984">1984</option>
+<option value="1985">1985</option>
+<option value="1986">1986</option>
+<option value="1987">1987</option>
+<option value="1988">1988</option>
+<option value="1989">1989</option>
+<option value="1990">1990</option>
+<option value="1991">1991</option>
+<option value="1992">1992</option>
+<option value="1993">1993</option>
+<option value="1994">1994</option>
+<option value="1995">1995</option>
+<option value="1996">1996</option>
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+</select>                                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="cliente_lugar_publicado_id">Donde nos conoció</label>                        <select class="form-control" name="cliente[lugar_publicado_id]" id="cliente_lugar_publicado_id">
+<option value="" selected="selected"></option>
+<option value="421">booking</option>
+<option value="420">despegar</option>
+<option value="66">Facebook</option>
+<option value="418">mardelaspampas.com.ar</option>
+<option value="419">mardelaspampas.travel</option>
+<option value="65">Otros</option>
+<option value="64">Publicidad de Google</option>
+<option value="63">Recomendación de Otro Cliente</option>
+</select>                                            </div>
+                </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <h4>Solicitud de Reserva</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="cliente_rsv_fingreso">Fecha de Ingreso</label><br/>
+                    <select name="cliente[rsv_fingreso][day]" id="cliente_rsv_fingreso_day">
+<option value="" selected="selected"></option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select><select name="cliente[rsv_fingreso][month]" id="cliente_rsv_fingreso_month">
+<option value="" selected="selected"></option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select><select name="cliente[rsv_fingreso][year]" id="cliente_rsv_fingreso_year">
+<option value="" selected="selected"></option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+</select><input type="hidden" size="10" id="cliente_rsv_fingreso_jquery_control" disabled="disabled" /><script type="text/javascript">
+  function zeroFill( number )
+  {
+    if ( number < 10 )
+    {
+    number = "0"+number ;
+    
+    }
+    return number + ""; 
+  }
+  function wfd_cliente_rsv_fingreso_read_linked()
+  {
+    jQuery("#cliente_rsv_fingreso_jquery_control").datepicker("setDate",jQuery("#cliente_rsv_fingreso_year").val() + "-" + jQuery("#cliente_rsv_fingreso_month").val() + "-" + zeroFill(jQuery("#cliente_rsv_fingreso_day").val()));   
+    return true;
+  }
+
+  function wfd_cliente_rsv_fingreso_update_linked(date)
+  {
+    jQuery("#cliente_rsv_fingreso_year").val(parseInt(date.substring(0, 4), 10));
+    jQuery("#cliente_rsv_fingreso_month").val(parseInt(date.substring(5, 7), 10));
+    jQuery("#cliente_rsv_fingreso_day").val(parseInt(date.substring(8), 10));
+
+    wfd_cliente_rsv_fingreso_check_linked_days();
+     
+  }
+
+  function wfd_cliente_rsv_fingreso_check_linked_days()
+  {
+    var daysInMonth = 32 - new Date(jQuery("#cliente_rsv_fingreso_year").val(), jQuery("#cliente_rsv_fingreso_month").val() - 1, 32).getDate();
+
+    jQuery("#cliente_rsv_fingreso_day option").prop("disabled",false);
+    jQuery("#cliente_rsv_fingreso_day option:gt(daysInMonth)").prop("disabled", true);
+
+    if (jQuery("#cliente_rsv_fingreso_day").val() > daysInMonth)
+    {
+      jQuery("#cliente_rsv_fingreso_day").val(daysInMonth);
+    }
+    wfd_cliente_rsv_fingreso_read_linked();
+     
+  }
+
+  jQuery(document).ready(function() {
+    jQuery("#cliente_rsv_fingreso_jquery_control").datepicker(jQuery.extend({}, {
+      minDate:    new Date(2018, 1 - 1, 1),
+      maxDate:    new Date(2019, 12 - 1, 31),
+      beforeShow: wfd_cliente_rsv_fingreso_read_linked,
+      onSelect:   wfd_cliente_rsv_fingreso_update_linked,
+      showOn:     "button"
+      , buttonImage: "https://sach.com.ar/images/calendar.png", buttonImageOnly: true
+    }, jQuery.datepicker.regional["es_AR"], {changeYear: true, changeMonth: true, yearRange: 'c:c+1', minDate: 0 }, {dateFormat: "yy-mm-dd"}));
+    wfd_cliente_rsv_fingreso_check_linked_days();    
+  });
+
+  jQuery("#cliente_rsv_fingreso_day, #cliente_rsv_fingreso_month, #cliente_rsv_fingreso_year").change(wfd_cliente_rsv_fingreso_check_linked_days);
+</script>                                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="cliente_rsv_fegreso">Fecha de Egreso</label><br/>
+                    <select name="cliente[rsv_fegreso][day]" id="cliente_rsv_fegreso_day">
+<option value="" selected="selected"></option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select><select name="cliente[rsv_fegreso][month]" id="cliente_rsv_fegreso_month">
+<option value="" selected="selected"></option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select><select name="cliente[rsv_fegreso][year]" id="cliente_rsv_fegreso_year">
+<option value="" selected="selected"></option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+</select><input type="hidden" size="10" id="cliente_rsv_fegreso_jquery_control" disabled="disabled" /><script type="text/javascript">
+  function zeroFill( number )
+  {
+    if ( number < 10 )
+    {
+    number = "0"+number ;
+    
+    }
+    return number + ""; 
+  }
+  function wfd_cliente_rsv_fegreso_read_linked()
+  {
+    jQuery("#cliente_rsv_fegreso_jquery_control").datepicker("setDate",jQuery("#cliente_rsv_fegreso_year").val() + "-" + jQuery("#cliente_rsv_fegreso_month").val() + "-" + zeroFill(jQuery("#cliente_rsv_fegreso_day").val()));   
+    return true;
+  }
+
+  function wfd_cliente_rsv_fegreso_update_linked(date)
+  {
+    jQuery("#cliente_rsv_fegreso_year").val(parseInt(date.substring(0, 4), 10));
+    jQuery("#cliente_rsv_fegreso_month").val(parseInt(date.substring(5, 7), 10));
+    jQuery("#cliente_rsv_fegreso_day").val(parseInt(date.substring(8), 10));
+
+    wfd_cliente_rsv_fegreso_check_linked_days();
+     
+  }
+
+  function wfd_cliente_rsv_fegreso_check_linked_days()
+  {
+    var daysInMonth = 32 - new Date(jQuery("#cliente_rsv_fegreso_year").val(), jQuery("#cliente_rsv_fegreso_month").val() - 1, 32).getDate();
+
+    jQuery("#cliente_rsv_fegreso_day option").prop("disabled",false);
+    jQuery("#cliente_rsv_fegreso_day option:gt(daysInMonth)").prop("disabled", true);
+
+    if (jQuery("#cliente_rsv_fegreso_day").val() > daysInMonth)
+    {
+      jQuery("#cliente_rsv_fegreso_day").val(daysInMonth);
+    }
+    wfd_cliente_rsv_fegreso_read_linked();
+     
+  }
+
+  jQuery(document).ready(function() {
+    jQuery("#cliente_rsv_fegreso_jquery_control").datepicker(jQuery.extend({}, {
+      minDate:    new Date(2018, 1 - 1, 1),
+      maxDate:    new Date(2019, 12 - 1, 31),
+      beforeShow: wfd_cliente_rsv_fegreso_read_linked,
+      onSelect:   wfd_cliente_rsv_fegreso_update_linked,
+      showOn:     "button"
+      , buttonImage: "https://sach.com.ar/images/calendar.png", buttonImageOnly: true
+    }, jQuery.datepicker.regional["es_AR"], {changeYear: true, changeMonth: true, yearRange: 'c:c+1', minDate: 0 }, {dateFormat: "yy-mm-dd"}));
+    wfd_cliente_rsv_fegreso_check_linked_days();    
+  });
+
+  jQuery("#cliente_rsv_fegreso_day, #cliente_rsv_fegreso_month, #cliente_rsv_fegreso_year").change(wfd_cliente_rsv_fegreso_check_linked_days);
+</script>                                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="cliente_tipo_unidad_id">Unidad de Alojamiento</label>                    <select class="form-control" name="cliente[tipo_unidad_id]" id="cliente_tipo_unidad_id">
+<option value="" selected="selected"></option>
+<option value="149">Apart de 2 ambientes</option>
+<option value="150">Doble standard c/ balcon</option>
+<option value="146">Habitacion cuadruple c/ hidromasaje</option>
+<option value="147">Habitacion cuadruple standard</option>
+<option value="148">Habitacion de 2 ambientes</option>
+<option value="143">Habitacion doble c/ hidromasaje</option>
+<option value="142">Habitacion doble standard</option>
+<option value="144">Habitacion triple standard</option>
+</select>                                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label>Huespedes</label>
+                    <table class="table table-borderless" style="margin: 0; padding: 0;">
+                        <tr>
+                            <td><select class="form-control" placeholder="Mayores" name="cliente[rsv_pax_mayor]" id="cliente_rsv_pax_mayor">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2" selected="selected">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select></td>
+                            <td><select class="form-control" placeholder="Menores" name="cliente[rsv_pax_menor]" id="cliente_rsv_pax_menor">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select></td>
+                            <td><select class="form-control" placeholder="Bebes (Cunas)" name="cliente[rsv_pax_bebe]" id="cliente_rsv_pax_bebe">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="cliente_rsv_comentarios">Comentarios</label>                    <textarea rows="4" cols="30" class="form-control" name="cliente[rsv_comentarios]" id="cliente_rsv_comentarios"></textarea>                                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <input class="form-control" type="hidden" name="cliente[id]" id="cliente_id" /><input class="form-control" type="hidden" name="cliente[complejo_id]" id="cliente_complejo_id" /><input class="form-control" type="hidden" name="cliente[cl_facebookid]" id="cliente_cl_facebookid" /><input type="hidden" name="cliente[c_token]" value="c6253f88329151e3aee85d590c4a7bd0f1678b1e" id="cliente_c_token" />                    <input type="hidden" id="fbid" />
+                    <label style="font-size: .8em;">
+                        Este formulario solamente solicita una reserva, no queda confirmada.<br/>Luego de completarlo nos pondremos en contacto con usted.
+                    </label>
+                    <button type="submit" id="rsvsubmit" class="form-control btn btn-info" >Enviar</button>
+                </div>
+            </div>
+        </div>
+</form>	
+
+
+
+
+		</div>
+	</section>
+
+{% endblock %}

@@ -122,6 +122,43 @@
 		</div>
 	</section>
 
+	<section class="gallery" id="videos">
+		<div class="container">
+			<div class="title">
+	        	<h2>Videos</h2>
+			</div>
+	        <div class="row">
+	            <div class="col-md-12">
+        			<video controls>
+        				<source src="{{ asset('/bundles/app/videos/001.mp4')}}" type="video/mp4">
+        			</video>
+                </div>
+            </div>
+            
+            {#
+            <div class="row">
+    			<div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="720" height="405" src="https://www.youtube.com/embed/3fS-w7eOUVc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            #}
+            
+    	</div>
+	</section>
+
+  <section class="gallery">
+    <div class="container">
+      <div class="title">
+        <h2>Recorrido panorámico</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="container" style="width:100%;height:500px;overflow:hidden;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 	<section class="services" id="services">
 		<div class="container">
 			<div class="title">
@@ -131,8 +168,8 @@
 				<div class="col-sm-4">
 					<div class="services-item">
 						<span class="icon-leaf"></span>
-						<h3>Desayuno buffet</h3>
-						<p>Con pastelería de elaboración artesanal, variedad de frutas, fiambres, panificados y demás delicias para empezar a disfrutar del día.</p>
+						<h3>Desayuno servido en la cabaña</h3>
+						<p>Con pastelería de elaboración artesanal, variedad de frutas, fiambres, panificados y demás delicias para empezar a disfrutar del día</p>
 					</div>
 				</div>
 				<div class="col-sm-4">
@@ -145,12 +182,56 @@
 				<div class="col-sm-4">
 					<div class="services-item">
 						<span class="icon-leaf"></span>
+						<h3>Sala de juegos</h3>
+						<p>Con mini-pool y mesa de ping pong sujeta a protocolos de uso</p>
+					</div>
+				</div>
+				{# 
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
 						<h3>Pileta</h3>
 						<p>Libre uso de la pileta climatizada cubierta</p>
 					</div>
 				</div>
+				#}
 			</div>
+			
 			<div class="row">
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Servicio de playa</h3>
+						<p>Sombrilla, reposeras y toallas</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Servicio de limpieza</h3>
+						<p>Todos los días a partir del segundo día de estadía</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Ropa blanca</h3>
+						<p>Recambio de ropa banca dia por medio</p>
+					</div>
+				</div>
+				{# 
+				<div class="col-sm-4">
+					<div class="services-item">
+						<span class="icon-leaf"></span>
+						<h3>Pileta</h3>
+						<p>Libre uso de la pileta climatizada cubierta</p>
+					</div>
+				</div>
+				#}
+			</div>
+			{#
+			<div class="row">
+				
 				<div class="col-sm-4">
 					<div class="services-item">
 						<span class="icon-leaf"></span>
@@ -173,6 +254,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="services-item">
@@ -196,6 +278,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="services-item">
@@ -231,6 +314,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="services-item">
@@ -247,6 +331,7 @@
 					</div>
 				</div>
 			</div>
+			#}
 		</div>
 	</section>
 
@@ -254,7 +339,8 @@
 		<div class="title">
 			<h2>Ubicación</h2>
 		</div>
-		<div id="map"></div>
+		{#<div id="map"></div>#}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.8145787849667!2d-57.022955684511196!3d-37.32321961390582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959b5dd041b2dcb5%3A0xec115d03c8a97e71!2sLa%20Mansi%C3%B3n%20del%20Bosque!5e0!3m2!1ses!2sar!4v1580764205855!5m2!1ses!2sar" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 	</section>
 
 	<section class="contact" id="contacto">
@@ -286,4 +372,22 @@
 			</div>
 		</div>
 	</section>
+
+  <script type="text/javascript">
+    // create the panorama player with the container
+    pano=new pano2vrPlayer("container");
+    // add the skin object
+    skin=new pano2vrSkin(pano,"{{ asset('bundles/app/images/panoramicas/') }}");
+    // load the configuration
+  
+    window.addEventListener("load", function() {
+      pano.readConfigUrlAsync("{{ asset('bundles/app/images/panoramicas/pano.xml') }}");
+    });
+  </script> 
+  
+
+  <script type="text/javascript">
+    carga("{{ asset('bundles/app/images/panoramicas/') }}");
+  </script>
+
 {% endblock %}	
